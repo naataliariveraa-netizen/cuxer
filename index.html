@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="facebook-domain-verification" content="jrmtqjsrard8sfqs6a7u2xe3m2wp71" />
+    <title>Cuxer - Innovación y Excelencia Empresarial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #ec4899;
+            --accent-color: #f59e0b;
+            --dark-bg: #1a1a2e;
+            --light-bg: #faf5ff;
+            --text-dark: #2d1b3d;
+            --text-light: #6b7280;
+            --gradient-1: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            --gradient-2: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header - New Design */
+        header {
+            background: var(--gradient-1);
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: -300px;
+            right: -200px;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(245, 158, 11, 0.2);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -150px;
+            animation: pulse 6s ease-in-out infinite reverse;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 6.5rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+            background: linear-gradient(45deg, #ffffff, #fef3c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 35px;
+            font-weight: 300;
+            opacity: 0.95;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            max-width: 650px;
+            line-height: 1.9;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-2);
+            color: white;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        /* Navigation - New Style */
+        nav {
+            background: rgba(26, 26, 46, 0.98);
+            padding: 25px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 20px;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: calc(100% - 40px);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* About Section - New Layout */
+        .about-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 70px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: var(--gradient-1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            transition: all 0.4s ease;
+            transform-style: preserve-3d;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) rotateY(5deg);
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.4);
+        }
+
+        .stat-number {
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-weight: 500;
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Services Section - New Grid */
+        .services-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #faf5ff 0%, #fef3c7 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 70px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 60px rgba(139, 92, 246, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 18px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 22px;
+            font-size: 1rem;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 28px;
+            font-size: 0.95rem;
+        }
+
+        .service-list li:before {
+            content: "→";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+        }
+
+        /* Team Section - New Design */
+        .team-section {
+            padding: 100px 0;
+            background: var(--dark-bg);
+            position: relative;
+        }
+
+        .team-section .section-title {
+            color: white;
+            background: linear-gradient(45deg, #ffffff, #fef3c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .team-section .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 70px;
+        }
+
+        .team-member {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 30px;
+            border-radius: 24px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.1);
+            border-color: var(--secondary-color);
+            box-shadow: 0 20px 50px rgba(236, 72, 153, 0.3);
+        }
+
+        .team-member img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+        }
+
+        .team-member h4 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .team-member .position {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 18px;
+            font-size: 1rem;
+        }
+
+        .team-member .quote {
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section - New Layout */
+        .contact-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 35px;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 25px;
+            background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%);
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 12px 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .contact-item i {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-right: 20px;
+            margin-top: 3px;
+            width: 30px;
+            font-size: 1.5rem;
+        }
+
+        .contact-item span {
+            line-height: 1.7;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .business-hours {
+            background: var(--gradient-1);
+            padding: 45px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
+            color: white;
+        }
+
+        .business-hours h4 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .business-hours p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.95);
+            font-size: 1.05rem;
+        }
+
+        .business-hours strong {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        footer p {
+            margin-bottom: 12px;
+            opacity: 0.85;
+            font-size: 1rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: float-wa 3s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.7);
+            color: white;
+            text-decoration: none;
+        }
+
+        @keyframes float-wa {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 4rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--dark-bg);
+                padding: 20px;
+                display: none;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .header-content {
+                padding: 60px 0;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mission Box */
+        .mission-section {
+            background: var(--gradient-1);
+            color: white;
+            padding: 50px;
+            border-radius: 24px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
+        }
+
+        .mission-section h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .mission-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="home">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">CUXER</h1>
+                <p class="logo-subtitle">Innovación y Excelencia Empresarial</p>
+                <p class="tagline">Transformamos ideas en realidad. Cuxer es tu socio estratégico para el crecimiento empresarial, ofreciendo soluciones innovadoras que impulsan el éxito con tecnología de vanguardia y experiencia comprobada.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Contáctanos</a>
+                    <a href="#services" class="btn btn-secondary">Nuestros Servicios</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">CUXER</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#team">Equipo</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir Cuxer?</h2>
+            <p class="section-subtitle">Innovación, calidad y compromiso con tu éxito empresarial</p>
+            
+            <div class="about-content">
+                <div>
+                    <p class="about-text">
+                        Cuxer es una empresa líder en soluciones empresariales, especializada en transformar desafíos en oportunidades de crecimiento. Con años de experiencia en el mercado, hemos desarrollado un enfoque integral que combina tecnología avanzada con estrategias innovadoras para maximizar el potencial de nuestros clientes.
+                    </p>
+                    <p class="about-text">
+                        Nuestro equipo multidisciplinario trabaja con dedicación para ofrecer soluciones personalizadas que se adaptan a las necesidades específicas de cada empresa. En Cuxer, creemos que cada proyecto es único y merece atención especializada para alcanzar resultados excepcionales.
+                    </p>
+                    <div class="mission-section">
+                        <h3>Nuestra Misión</h3>
+                        <p>Ser el socio estratégico que impulse el crecimiento empresarial a través de soluciones innovadoras, tecnología de vanguardia y un servicio excepcional que supere las expectativas de nuestros clientes.</p>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Proyectos Completados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfacción Cliente</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Soporte Disponible</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Soluciones integrales para impulsar tu negocio al siguiente nivel</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo de Software</h3>
+                    <p>Creamos aplicaciones web y móviles de última generación adaptadas a las necesidades de tu empresa.</p>
+                    <ul class="service-list">
+                        <li>Aplicaciones web modernas</li>
+                        <li>Desarrollo móvil nativo</li>
+                        <li>Sistemas de gestión empresarial</li>
+                        <li>E-commerce personalizado</li>
+                        <li>APIs y microservicios</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Consultoría Estratégica</h3>
+                    <p>Optimizamos tus procesos empresariales con estrategias que generan resultados medibles y crecimiento sostenible.</p>
+                    <ul class="service-list">
+                        <li>Análisis de procesos</li>
+                        <li>Optimización operativa</li>
+                        <li>Estrategias de crecimiento</li>
+                        <li>Transformación digital</li>
+                        <li>Gestión del cambio</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Soluciones en la Nube</h3>
+                    <p>Migramos y optimizamos tu infraestructura tecnológica para máxima eficiencia, seguridad y escalabilidad.</p>
+                    <ul class="service-list">
+                        <li>Migración a la nube</li>
+                        <li>Infraestructura como servicio</li>
+                        <li>Backup y recuperación</li>
+                        <li>Seguridad avanzada</li>
+                        <li>Monitoreo continuo</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Capacitación y Desarrollo</h3>
+                    <p>Formamos a tu equipo con las habilidades necesarias para enfrentar los desafíos del futuro empresarial.</p>
+                    <ul class="service-list">
+                        <li>Capacitación técnica</li>
+                        <li>Desarrollo de liderazgo</li>
+                        <li>Metodologías ágiles</li>
+                        <li>Certificaciones profesionales</li>
+                        <li>Mentoría personalizada</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Ciberseguridad</h3>
+                    <p>Protegemos tu información y sistemas con las mejores prácticas de seguridad del mercado.</p>
+                    <ul class="service-list">
+                        <li>Auditorías de seguridad</li>
+                        <li>Implementación de protocolos</li>
+                        <li>Monitoreo de amenazas</li>
+                        <li>Capacitación en seguridad</li>
+                        <li>Respuesta a incidentes</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    <h3>Soporte Técnico</h3>
+                    <p>Brindamos soporte continuo de alta calidad para garantizar el funcionamiento óptimo de tus sistemas.</p>
+                    <ul class="service-list">
+                        <li>Soporte 24/7</li>
+                        <li>Mantenimiento preventivo</li>
+                        <li>Resolución rápida</li>
+                        <li>Actualizaciones automáticas</li>
+                        <li>Consultoría técnica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <p class="section-subtitle">Profesionales expertos comprometidos con tu éxito</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Director Cuxer">
+                    <h4>Equipo Cuxer</h4>
+                    <p class="position">Director General</p>
+                    <p class="quote">"En Cuxer, transformamos desafíos en oportunidades de crecimiento con soluciones innovadoras y tecnología de vanguardia."</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=face" alt="Gerente de Proyectos">
+                    <h4>Equipo Profesional</h4>
+                    <p class="position">Gerente de Proyectos</p>
+                    <p class="quote">"Cada proyecto en Cuxer es una oportunidad para crear valor excepcional y superar expectativas con soluciones personalizadas."</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face" alt="Especialista en Tecnología">
+                    <h4>Equipo Técnico</h4>
+                    <p class="position">Especialista en Tecnología</p>
+                    <p class="quote">"La tecnología avanzada es nuestro aliado para crear soluciones que transforman la manera de hacer negocios."</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="Consultora Senior">
+                    <h4>Equipo Consultor</h4>
+                    <p class="position">Consultora Senior</p>
+                    <p class="quote">"En Cuxer, cada cliente es único. Desarrollamos estrategias personalizadas para maximizar su potencial empresarial."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos aquí para ayudarte a alcanzar tus objetivos empresariales</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Aguirre 5942, Mar Del Plata<br>Buenos Aires, Argentina</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+5491164729968</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@cuxer.com.ar</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>CUIL: 20427228933</span>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="business-hours">
+                        <h4>Horarios de Atención</h4>
+                        <p><strong>Días de atención:</strong></p>
+                        <p>Lunes a Viernes: 9:00 a 18:00 hs</p>
+                        <p>Sábados: 9:00 a 13:00 hs</p>
+                        <br>
+                        <p><strong>Soporte técnico:</strong></p>
+                        <p>Disponible 24/7</p>
+                        <p>WhatsApp: +5491164729968</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cuxer. Todos los derechos reservados</p>
+            <p>Innovación y excelencia empresarial para el crecimiento de tu negocio</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scrolling effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(26, 26, 46, 0.99)';
+            } else {
+                nav.style.background = 'rgba(26, 26, 46, 0.98)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .team-member, .stat-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491164729968?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Cuxer" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
